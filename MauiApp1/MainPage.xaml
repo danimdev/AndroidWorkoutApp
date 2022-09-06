@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage" BackgroundColor="BlueViolet">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label Text="WorkoutLetsGo" FontSize="30" HorizontalOptions="Center" TextColor="White"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+
+                <Label Text="Min" HorizontalOptions="Center" Margin="10,15" TextColor="White"/>
+                <Border>
+                    <Picker x:Name="MinPicker" HorizontalTextAlignment="Center" WidthRequest="75" FontSize="20"/>
+                </Border>
+                <Label Text="Sec" HorizontalOptions="Center" Margin="10,15" TextColor="White"/>
+                <Border>
+                    <Picker x:Name="SecPicker" HorizontalTextAlignment="Center" FontSize="20" WidthRequest="75" />
+                </Border>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Reps" Margin="5,15" TextColor="White"/>
+                <Border>
+                    <Picker x:Name="RepPicker" HorizontalTextAlignment="Center" FontSize="20" WidthRequest="75"/>
+                </Border>
+            </HorizontalStackLayout>
+
+            <Button x:Name="StartTimerButton" Text="Start" WidthRequest="100" Clicked="ActivateTimerButton"/>
+
+            <Button x:Name="StopTimerButton" Text="Stop" WidthRequest="100" Clicked="StopTimerButton_Clicked"/>
+
+            <Border BackgroundColor="Black" Padding="15" WidthRequest="200" StrokeThickness="10">
+                <Label x:Name="TimeResultLabel" Text="00:00:00" TextColor="White" HorizontalTextAlignment="Center" FontSize="25"/>
+            </Border>
+
+            <Border BackgroundColor="Black" Padding="15" WidthRequest="200" StrokeThickness="10">
+                <Label x:Name="RepCountLabel" Text="Reps: " TextColor="White" HorizontalTextAlignment="Center" FontSize="25"/>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
